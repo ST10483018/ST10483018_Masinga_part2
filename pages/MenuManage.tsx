@@ -54,7 +54,7 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
       );
       Alert.alert("Success", "Item updated successfully");
     } else {
-      // Add new
+      // Add new item
       const newItem: MenuItem = {
         id: Date.now().toString(),
         ...formData,
@@ -65,7 +65,7 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
 
     resetForm();
   };
-
+  
   const handleEdit = (item: MenuItem) => {
     setEditingId(item.id);
     setFormData({
@@ -199,7 +199,7 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
                 </View>
                 <View style={styles.actions}>
                   <TouchableOpacity onPress={() => handleEdit(item)}>
-                    <Text style={styles.edit}>✏️</Text>
+                    <Text style={styles.edit}>&</Text>
                   </TouchableOpacity>
                   <TouchableOpacity onPress={() => handleDelete(item.id)}>
                     <Text style={styles.delete}>🗑️</Text>

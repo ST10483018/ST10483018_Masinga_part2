@@ -12,7 +12,7 @@ export default function Home() {
         {/* Logo Icon */}
         <View style={styles.iconContainer}>
           <View style={styles.iconCircle}>
-            <Image source={require("../assets/steptodown.com469316.jpg")} style={{ width: 120, height: 120, borderRadius: 60, }} />
+            <Image source={require("../assets/cooking.jpg")} style={{ width: 120, height: 120, borderRadius: 60, }} />
           </View>
         </View>
 
