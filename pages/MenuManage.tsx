@@ -199,10 +199,10 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
                 </View>
                 <View style={styles.actions}>
                   <TouchableOpacity onPress={() => handleEdit(item)}>
-                    <Text style={styles.edit}>&</Text>
+                    <Text style={styles.edit}>&#x270E;</Text>
                   </TouchableOpacity>
                   <TouchableOpacity onPress={() => handleDelete(item.id)}>
-                    <Text style={styles.delete}>🗑️</Text>
+                    <Text style={styles.delete}>&#x1F5D1;</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
   form: { marginBottom: 24 },
   input: {
     borderWidth: 1,
-    borderColor: "#fbfffaff",
+    borderColor: "#000000ff",
     borderRadius: 6,
     padding: 10,
     marginBottom: 10,
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   backButton: { marginRight: 0, marginBottom: 20, },
-  label: { color: "#666", marginBottom: 8, fontSize: 14 },
+  label: { color: "#000000ff", marginBottom: 8, fontSize: 14 },
   courseRow: {
     flexDirection: "row",
     justifyContent: "space-around",
@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   itemName: { fontWeight: "bold", fontSize: 16 },
-  itemDescription: { color: "#666", fontSize: 13 },
+  itemDescription: { color: "#000000ff", fontSize: 13 },
   itemPrice: { color: "#333", marginTop: 4 },
   itemCourse: { color: "#777", fontSize: 12 },
   actions: {
