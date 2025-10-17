@@ -28,7 +28,10 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Home">
+         {(props: any) => <Home {...props} menu={menu} />}
+        </Stack.Screen>
+
         <Stack.Screen name="Menu">
           {(props) => <Menu {...props} menu={menu} />}
         </Stack.Screen>

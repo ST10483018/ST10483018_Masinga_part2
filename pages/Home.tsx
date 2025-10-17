@@ -2,8 +2,23 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Home() {
+type Course = "starters" | "mains" | "desserts";
+
+interface MenuItem { 
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  course: Course;
+} // Receive menu as a prop
+
+interface HomeProps {
+  menu: MenuItem[]; // Receive menu as a prop
+}
+
+export default function Home({ menu }: HomeProps) {
   const navigation = useNavigation();
+  const totalItems = menu.length; // Calculate total number of menu items
 
   return (
     <View style={styles.container}>
@@ -16,6 +31,7 @@ export default function Home() {
         </View>
 
         <Text style={styles.title}>Welcome</Text>
+        <Text style={styles.subtitle}>Total Dishes: {totalItems}</Text>  {/* Displays total number of Dishes */}
 
         {/* Buttons */}
         <View style={styles.buttonGroup}>
@@ -89,5 +105,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#111",
     fontWeight: "600",
+  },
+  subtitle: {
+  fontSize: 18,
+  color: "#555",
+  marginBottom: 10,
+  textAlign: "center",
   },
 });

@@ -99,7 +99,7 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
           <Text style={styles.title}>Christoffel’s Dining Manager</Text>
         </View>
 
-        {/* Filter */}
+        {/* Filter for dishes */}
         <View style={styles.courseRow}>
           {(["all", "starters", "mains", "desserts"] as (Course | "all")[]).map(
             (c) => (
@@ -125,7 +125,7 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
           )}
         </View>
 
-        {/* Form */}
+        {/* Form for adding dishes */}
         <View style={styles.form}>
           <TextInput
             style={styles.input}
@@ -176,14 +176,14 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
               {editingId ? "Update Dish" : "Add Dish"}
             </Text>
           </TouchableOpacity>
-        </View>
+        </View> 
 
         {/* List */}
         <View style={styles.list}>
           {filteredItems.length === 0 ? (
             <Text style={{ textAlign: "center", color: "#666" }}>
               No dishes yet.
-            </Text>
+            </Text> 
           ) : (
             filteredItems.map((item) => (
               <View key={item.id} style={styles.card}>
