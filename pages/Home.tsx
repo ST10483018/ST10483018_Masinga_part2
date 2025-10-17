@@ -10,15 +10,15 @@ interface MenuItem {
   description: string;
   price: string;
   course: Course;
-} // Receive menu as a prop
+} 
 
 interface HomeProps {
-  menu: MenuItem[]; // Receive menu as a prop
+  menu: MenuItem[]; 
 }
 
 export default function Home({ menu }: HomeProps) {
   const navigation = useNavigation();
-  const totalItems = menu.length; // Calculate total number of menu items
+  const totalItems = menu.length; 
 
   return (
     <View style={styles.container}>
@@ -31,7 +31,7 @@ export default function Home({ menu }: HomeProps) {
         </View>
 
         <Text style={styles.title}>Welcome</Text>
-        <Text style={styles.subtitle}>Total Dishes: {totalItems}</Text>  {/* Displays total number of Dishes */}
+        <Text style={styles.subtitle}>Total Dishes: {totalItems}</Text>  
 
         {/* Buttons */}
         <View style={styles.buttonGroup}>

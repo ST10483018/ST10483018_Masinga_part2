@@ -1,8 +1,7 @@
-// ManageMenu.tsx
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Alert, StyleSheet,} from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { ChevronLeft } from "lucide-react-native";
+import { ChevronLeft, Pencil, Trash2, } from "lucide-react-native";
 
 type Course = "starters" | "mains" | "desserts";
 
@@ -198,12 +197,14 @@ export const MenuManage = ({ menu, setMenu }: MenuManageProps) => {
                   </Text>
                 </View>
                 <View style={styles.actions}>
-                  <TouchableOpacity onPress={() => handleEdit(item)}>
-                    <Text style={styles.edit}>&#x270E;</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity onPress={() => handleDelete(item.id)}>
-                    <Text style={styles.delete}>&#x1F5D1;</Text>
-                  </TouchableOpacity>
+                  <View style={styles.actions}>
+                    <TouchableOpacity onPress={() => handleEdit(item)}>
+                      <Pencil size={20} color="#333" style={styles.edit} />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleDelete(item.id)}>
+                      <Trash2 size={20} color="red" style={styles.delete} />
+                    </TouchableOpacity>
+                  </View>
                 </View>
               </View>
             ))
@@ -262,7 +263,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   edit: { fontSize: 18, marginHorizontal: 8 },
-  delete: { fontSize: 18, color: "red" },
+  delete: { fontSize: 18, color: "red", marginHorizontal: 8 },
   courseButton: {
     paddingVertical: 6,
     paddingHorizontal: 12,
