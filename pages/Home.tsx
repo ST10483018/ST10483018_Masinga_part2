@@ -1,4 +1,3 @@
-// screens/Home.tsx
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -9,7 +8,7 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.inner}>
-        {/* Logo Icon */}
+        {/* Logo Image */}
         <View style={styles.iconContainer}>
           <View style={styles.iconCircle}>
             <Image source={require("../assets/cooking.jpg")} style={{ width: 120, height: 120, borderRadius: 60, }} />
