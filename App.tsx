@@ -23,11 +23,12 @@ export default function App() {
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle="dark-content" />
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="Landing"
         screenOptions={{
           headerShown: false,
         }}
       >
+        
         <Stack.Screen name="Home">
           {(props) => <Home {...props} menu={menu} />}
         </Stack.Screen>
