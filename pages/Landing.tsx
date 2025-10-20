@@ -16,7 +16,7 @@ interface HomeProps {
   menu: MenuItem[]; 
 }
 
-export default function Home({ menu }: HomeProps) {
+export default function Landing({ menu }: HomeProps) {
   const navigation = useNavigation();
   const totalItems = menu.length; 
 
@@ -37,7 +37,7 @@ export default function Home({ menu }: HomeProps) {
         <View style={styles.buttonGroup}>
           <TouchableOpacity
             style={[styles.button, styles.outlineButton]}
-            onPress={() => navigation.navigate("Menu" as never)}
+            onPress={() => navigation.navigate("Home" as never)}
           >
             <Text style={styles.buttonText}>View Menu</Text>
           </TouchableOpacity>

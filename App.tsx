@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaView, StatusBar } from "react-native";
-import Home from "./pages/Landing";
-import Menu from "./pages/Home";        
+import Landing from "./pages/Landing";
+import Home from "./pages/Home";        
 import { MenuManage } from "./pages/MenuManage";
 
 const Stack = createNativeStackNavigator();
@@ -29,11 +29,10 @@ export default function App() {
         }}
       >
         <Stack.Screen name="Home">
-         {(props: any) => <Home {...props} menu={menu} />}
+          {(props) => <Home {...props} menu={menu} />}
         </Stack.Screen>
-
-        <Stack.Screen name="Menu">
-          {(props) => <Menu {...props} menu={menu} />}
+        <Stack.Screen name="Landing">
+         {(props: any) => <Landing {...props} menu={menu} />}
         </Stack.Screen>
         <Stack.Screen name="Manage">
           {(props) => <MenuManage {...props} menu={menu} setMenu={setMenu} />}

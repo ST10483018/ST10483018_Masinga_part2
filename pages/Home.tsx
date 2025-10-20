@@ -16,7 +16,7 @@ interface MenuProps {
   }[];
 }
 
-export default function Menu({ menu }: MenuProps) {
+export default function Home({ menu }: MenuProps) {
   const navigation = useNavigation();
   const [selectedCourse, setSelectedCourse] = useState<Course>("all");
   const [loading] = useState(false);
